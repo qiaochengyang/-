@@ -1,4 +1,5 @@
 # mysql配置
 
 skip-grant-tables
-update mysql.user set authentication_string=password('*') where user='root';
+sudo mysql -uroot
+update user set authentication_string=password("*"),plugin='mysql_native_password' where user='root';
